@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --size:301px;
+    --offset:150px;
+    /* if size is changed, the offset must be changed so that size is double that of offset + 1 */
+    --color:rgb(255, 72, 0);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #050505;
+}
+.pebble{
+    border: 48% 52% 70% 30% / 30% 30% 70% 70% ;
+}
+.cube{
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    transform-style: preserve-3d;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+.cube div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515,var(--color));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(var(--offset));
+}
+
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    background: rgb(22, 22, 22);
+    transform: rotateX(90deg) translateZ(var(--offset));
+}
+.top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    background: var(--color);
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(255, 72, 0,0.2), 0 0 200px rgba(255, 72, 0,0.4);
+}
