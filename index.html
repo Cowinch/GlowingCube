@@ -8,14 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cube">
+    <div class="cube" onmouseover="glowUp(this)" onmouseout="glowDown(this)" onclick="pauseSpin(this)">
         <div class="top"></div>
         <div>
-            <span style="--i:0;"><p class="pebble">exmaple text</p></span>
-            <span style="--i:1;"></span>
-            <span style="--i:2;"></span>
-            <span style="--i:3;"></span>
+            <span style="--i:0;">
+                <div class="pebble-container">
+                    <!-- <div class="pebble" style="width:60px; height:65px"></div>
+                    <div class="pebble" style="width:60px; height:65px"></div>
+                    <div class="pebble" style="width:60px; height:65px"></div>
+                    <div class="pebble" style="width:60px; height:65px"></div>
+                    <div class="pebble" style="width:60px; height:65px"></div> -->
+                </div>
+            </span>
+            <span style="--i:1;">
+
+            </span>
+            <span style="--i:2;">
+
+            </span>
+            <span style="--i:3;">
+
+            </span>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
