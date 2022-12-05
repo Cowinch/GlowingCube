@@ -75,7 +75,7 @@ body{
     transform: rotateX(90deg) translateZ(var(--offset));
 }
 .top::before{
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
     content: '';
     position: absolute;
     top: 0;
@@ -90,6 +90,5 @@ body{
 .glowing .top::before{
     box-shadow: 0 0 120px rgba(255, 72, 0,0.2),
     0 0 200px rgba(255, 72, 0,0.4),
-    0 0 200px rgba(255, 72, 0,0.6),
-    0 0 200px rgba(255, 72, 0,0.8);
+    0 0 200px rgba(255, 72, 0,0.6);
 }
