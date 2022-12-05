@@ -27,12 +27,13 @@ body{
     width: var(--size);
     height: var(--size);
     transform-style: preserve-3d;
-    animation: animate 10s linear infinite;
+    animation: animateSpin 10s linear infinite;
+    cursor: pointer;
 }
 .paused{
     animation-play-state: paused;
 }
-@keyframes animate{
+@keyframes animateSpin{
     0% {
         transform: rotateX(-30deg) rotateY(0deg);
     }
@@ -89,6 +90,6 @@ body{
 }
 .glowing .top::before{
     box-shadow: 0 0 120px rgba(255, 72, 0,0.2),
-    0 0 200px rgba(255, 72, 0,0.4),
-    0 0 200px rgba(255, 72, 0,0.6);
+    0 0 200px rgba(255, 72, 0,0.3),
+    0 0 200px rgba(255, 72, 0,0.4);
 }
